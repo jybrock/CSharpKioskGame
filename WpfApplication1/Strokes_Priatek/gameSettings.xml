@@ -2,7 +2,7 @@
 <data>
 	<totalGameTimeInMinutes>.2</totalGameTimeInMinutes>
 	<highScoreTimeOut>30</highScoreTimeOut>
-	<startWithoutBgMusic>false</startWithoutBgMusic>
+	<startWithoutBgMusic>true</startWithoutBgMusic>
 	<sizeMult>1.5</sizeMult>  <!-- size for large format = 2.5 -->
 	<coloredThresholdPercentage>97</coloredThresholdPercentage>
 	<outOfBoundsPenaltyMultiplier>2</outOfBoundsPenaltyMultiplier>

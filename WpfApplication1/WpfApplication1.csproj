@@ -165,11 +165,9 @@
     </Content>
     <Resource Include="PlayAgain Background.jpg" />
     <Resource Include="Insert Credit Button.png" />
-    <Resource Include="PlayAgain Background.png" />
     <Content Include="Results Screen Background.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Results Screen Background.png" />
     <Content Include="Tip1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -183,6 +181,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="ugot2playicon.ico" />
+    <Resource Include="Results Screen Background.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Content Include="StartScreenBackground.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

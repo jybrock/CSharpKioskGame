@@ -401,7 +401,7 @@ namespace Strokes {
                         lbTickets.BringIntoView();
                         lbScore.BringIntoView();
                         imgResultScreenBg.Visibility = Visibility.Visible;
-                        lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+                        lbCredits.Content = "Credits Inserted (" + intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
                         lbCredits.Visibility = Visibility.Visible;
                     }));
                     //Image image = Image.FromFile("./Strokes Screens/Results Screen/Tip" + cycle.ToString() + ".png");
@@ -423,7 +423,7 @@ namespace Strokes {
                         lbTickets.BringIntoView();
                         lbScore.BringIntoView();
                         lbCredits.BringIntoView();
-                        lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+                        lbCredits.Content = "Credits Inserted (" + intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
                         imgTip1.BringIntoView();
                     }));
 
@@ -499,28 +499,14 @@ namespace Strokes {
                         //System.Windows.Forms.MessageBox.Show("Credits < Minimum Tokens", "GamePro SerialData Received");
                     //}
                 //}
-                //##1
-                //if ((!AppSet.AttractMode) && (!AppSet.isOn) && (lbCredits.IsVisible)) {
-                //lbCredits.UpdateLayout();
-                //Invoke(new Action(() => { lbCredits.Text = MainWindow.AppSet.intCredits.ToString(); }));
-                //lbCredits.Invoke(new Action(() => { lbCredits.Refresh(); }));
-                //lbCredits.Content = "\r\n" + MainWindow.AppSet.intCredits.ToString() + @" / " + MainWindow.AppSet.intTokensMin.ToString();
-                //}
-                if (intCredits > 0) {
-                    AppSet.intCredits = intCredits;
-                    MainWindow.AppSet.intCredits = intCredits;
-                }
-                Dispatcher.BeginInvoke(new Action(() => {
-                    //lbTickets.BringIntoView();
-                    //lbScore.BringIntoView();
-                    //lbCredits.BringIntoView();
-                    lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
-                    //imgTip1.BringIntoView();
-                }));
             }
-            
-            
-
+            if (intCredits > 0) {
+                AppSet.intCredits = intCredits;
+                MainWindow.AppSet.intCredits = intCredits;
+            }
+            if ((!AppSet.AttractMode) && (!AppSet.isOn)) {
+                lbCredits.Content = "\r\n" + MainWindow.AppSet.intCredits.ToString() + @" / " + MainWindow.AppSet.intTokensMin.ToString();
+            }
             //if (intCredits >= AppSet.intTokensMin) {
             //    //System.Windows.MessageBox.Show("Priatek Strokes Game Demo", "StartGameBtn_MouseDown Button | Click");
             //    //if (imgPlayAgainBg.Visibility == Visibility.Visible) {
@@ -594,7 +580,7 @@ namespace Strokes {
         /// <param name="e">MouseButtonEventArgs</param>
         private void ResultScreenBg_MouseDown(object sender, MouseButtonEventArgs e) {
             if ((!AppSet.AttractMode) && (!AppSet.isOn)) {
-                lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+                lbCredits.Content = "\r\n" + MainWindow.AppSet.intCredits.ToString() + @" / " + MainWindow.AppSet.intTokensMin.ToString();
             }
             // Set UI Value for player interest to start another game
             // Ability to play again depends on tokens deposited and current transition phase
@@ -626,26 +612,7 @@ namespace Strokes {
             PrintTickets();
             
         }
-        /// <summary>
-        /// Mouse Down Event Handler for Insert Credit Button
-        /// </summary>
-        /// <param name="sender">Object</param>
-        /// <param name="e">MouseButtonEventArgs</param>
-        private void imgInsertCreditBtn_MouseDown(object sender, MouseButtonEventArgs e) {
-            intCredits++;
-            //MessageBox.Show("intCredts #: " + intCredits.ToString(), "Insert Credit Button MouseDown");
-            AppSet.intCredits = intCredits;
-            //MessageBox.Show("AppSet.intCredts #: " + AppSet.intCredits.ToString(), "Insert Credit Button MouseDown");
-            MainWindow.AppSet.intCredits = AppSet.intCredits;
-            //MessageBox.Show("MainWindow.AppSet.intCredts #: " + MainWindow.AppSet.intCredits.ToString(), "Insert Credit Button MouseDown");
-            //StartGameBtn_MouseDown(sender, e);
-            lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
-            if (MainWindow.AppSet.intCredits >= AppSet.intTokensMin) {
-                imgInsertCreditBtn.Visibility = Visibility.Hidden;
-                imgStartGameBtn.Visibility = Visibility.Visible;
-                AppSet.AttractMode = false;
-            }
-        }
+
         /// <summary>
         /// AttractMode Background MouseDown Click Event Handler.
         /// Strokes Game Opening Media before StartGame MediaPlayer Game Media
@@ -685,7 +652,7 @@ namespace Strokes {
             lbCredits.Cursor = Cursors.None;
             AppSet.AttractMode = false;
             if ((!AppSet.AttractMode) && (!AppSet.isOn)) {
-                lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+                lbCredits.Content = "\r\n" + MainWindow.AppSet.intCredits.ToString() + @" / " + MainWindow.AppSet.intTokensMin.ToString();
             }
         }
 
@@ -719,7 +686,7 @@ namespace Strokes {
             imgPlayAgainBg.Visibility = Visibility.Visible;
             AppSet.AttractMode = false;
             if ((!AppSet.AttractMode) && (!AppSet.isOn)) {
-                lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+                lbCredits.Content = "\r\n" + MainWindow.AppSet.intCredits.ToString() + @" / " + MainWindow.AppSet.intTokensMin.ToString();
             }
             AppSet.isOn = true;
             isOn = AppSet.isOn;
@@ -757,7 +724,7 @@ namespace Strokes {
             if (!AppSet.AttractMode) {
                 lbCredits.Visibility = Visibility.Visible;
                 if (!AppSet.isOn) {
-                    lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+                    lbCredits.Content = "\r\n" + MainWindow.AppSet.intCredits.ToString() + @" / " + MainWindow.AppSet.intTokensMin.ToString();
                 }
                 mpStartScreenMusic.LoadedBehavior = MediaState.Play;
                 mpStartScreen.Visibility = Visibility.Visible;
@@ -796,7 +763,7 @@ namespace Strokes {
             //MessageBox.Show("Before !AppSet.AttractMode", "mpStartScreen_MediaEnded");
             if (!AppSet.AttractMode) {
                 if (!AppSet.isOn) {
-                    lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+                    lbCredits.Content = "\r\n" + MainWindow.AppSet.intCredits.ToString() + @" / " + MainWindow.AppSet.intTokensMin.ToString();
                 }
                 //AppSet.AttractMode = true;
                 //MessageBox.Show("Is !AppSet.AttractMode", "mpStartScreen_MediaEnded");
@@ -827,7 +794,7 @@ namespace Strokes {
                 }
                 if (!AppSet.isOn) {
                     if (!AppSet.AttractMode) {
-                        lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+                        lbCredits.Content = "\r\n" + MainWindow.AppSet.intCredits.ToString() + @" / " + MainWindow.AppSet.intTokensMin.ToString();
                     }
                     //MessageBox.Show("Is !AppSet.AttractMode" + "\r\n" + "(!AppSet.isOn)", "mpStartScreen_MediaEnded");
                     mpStartScreen.LoadedBehavior = MediaState.Play;
@@ -904,9 +871,9 @@ namespace Strokes {
             AppSet.strFSOpathSettings = Convert.ToString(AppSet.strFSOpathSettings);
             AppSet.playAgainTimer1 = 7;
             AppSet.playAgainTimer1 = Convert.ToInt32(AppSet.playAgainTimer1);
-            AppSet.RatioConfig = 0.0005;
+            AppSet.RatioConfig = 0.002;
             AppSet.RatioConfig = Convert.ToDouble(AppSet.RatioConfig);
-            AppSet.Ratio = 0.0005;
+            AppSet.Ratio = 0.002;
             AppSet.Ratio = Convert.ToDouble(AppSet.Ratio);
             AppSet.isOn = false;
             AppSet.isOn = Convert.ToBoolean(isOn);
@@ -947,7 +914,7 @@ namespace Strokes {
             AppSet.intGameBrushSize = Convert.ToInt32(1);
             AppSet.intLeaderboardTimeout = Convert.ToInt32(5);
             AppSet.intTutorialTimeout = Convert.ToInt32(5);
-            AppSet.intTokensMin = Convert.ToInt32(1);
+            AppSet.intTokensMin = Convert.ToInt32(4);
             AppSet.intScoreTickets01 = Convert.ToInt32(100);
             AppSet.intScoreTickets02 = Convert.ToInt32(200);
             AppSet.intScoreTickets03 = Convert.ToInt32(300);
@@ -1398,8 +1365,7 @@ namespace Strokes {
             ApplicationSettings AppSet = new ApplicationSettings();
             DataContext = new CreditsViewModel();
             CreditsViewModel CreditsViewM = new CreditsViewModel();
-            //gameProSerial.DataReceived += new SerialDataReceivedEventHandler(SerialDataReceivedHandler);
-            
+            gameProSerial.DataReceived += new SerialDataReceivedEventHandler(SerialDataReceivedHandler);
             //DataContext = new ApplicationSettings();
             //MainWindow.AppSet.SetDefaults(AppSet);
             //AppSet.SetDefaults(MainWindow.AppSet);
@@ -1506,7 +1472,7 @@ namespace Strokes {
             lbTickets.Visibility = Visibility.Hidden;                       // No Affect
             //lbScore.Visibility = Visibility.Collapsed;
             lbScore.Visibility = Visibility.Hidden;                         // No Affect
-            lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+            lbCredits.Content = "Credits Inserted (" + intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
             //V1.0.0.2 Code
             //mePlayer3.LoadedBehavior = MediaState.Stop;
             //mePlayer3.Visibility = Visibility.Collapsed;
@@ -1561,14 +1527,14 @@ namespace Strokes {
             switch (boolCreditMode) {
                 case false:
                     if (AppSet.intCredits > AppSet.intTokensMin) {
-                        lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+                        lbCredits.Content = "\r\n" + intCredits.ToString() + @" / " + AppSet.intTokensMin.ToString();
                         AppSet.IsAttractMode = true;
                         AppSet.IsRewardsMode = true;
                         AppSet.IsPlayAgainMode = true;
                         goto case true;
                     }
                     if (AppSet.intCredits < 1) {
-                        lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+                        lbCredits.Content = "\r\n" + intCredits.ToString() + @" / " + AppSet.intTokensMin.ToString();
                         AppSet.IsAttractMode = true;
                         AppSet.IsRewardsMode = false;
                         AppSet.IsPlayAgainMode = false;
@@ -1576,7 +1542,7 @@ namespace Strokes {
                         //btnMonitorMode.ForeColor = Color.Black;
                         //bContinueCapturing = false;
                         if (!String.IsNullOrWhiteSpace(AppSet.strFSOpathGameExe)) {
-                            lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+                            lbCredits.Content = "\r\n" + intCredits.ToString() + @" / " + AppSet.intTokensMin.ToString();
                             AppSet.IsAttractMode = false;
                             imgStartGameBtn.Source = CreditImage.Source;
                             imgStartGameBtn.Visibility = Visibility.Visible;
@@ -1585,7 +1551,7 @@ namespace Strokes {
                             mpStartScreenMusic.LoadedBehavior = MediaState.Play;
                             //mainSocket.Close();
                         }
-                        lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+                        lbCredits.Content = "\r\n" + intCredits.ToString() + @" / " + AppSet.intTokensMin.ToString();
                         AppSet.IsAttractMode = true;
                         imgStartGameBtn.Source = CreditImage.Source;
                         imgStartGameBtn.Visibility = Visibility.Hidden;
@@ -1595,7 +1561,7 @@ namespace Strokes {
                         break;
                     }
                     if (AppSet.intCredits >= AppSet.intTokensMin) {
-                        lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+                        lbCredits.Content = "\r\n" + intCredits.ToString() + @" / " + AppSet.intTokensMin.ToString();
                         AppSet.IsAttractMode = false;
                         imgStartGameBtn.Source = CreditImage.Source;
                         imgStartGameBtn.Visibility = Visibility.Visible;
@@ -1607,21 +1573,21 @@ namespace Strokes {
                     break;
                 case true:
                     if (AppSet.intTokensMin > AppSet.intCredits) {
-                        lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+                        lbCredits.Content = "\r\n" + intCredits.ToString() + @" / " + AppSet.intTokensMin.ToString();
                         AppSet.IsAttractMode = true;
                         AppSet.IsRewardsMode = false;
                         AppSet.IsPlayAgainMode = false;
                         goto case false;
                     }
                     if (AppSet.intCredits > AppSet.intTokensMin) {
-                        lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+                        lbCredits.Content = "\r\n" + intCredits.ToString() + @" / " + AppSet.intTokensMin.ToString();
                         AppSet.IsAttractMode = false;
                         mpAttractMode.LoadedBehavior = MediaState.Stop;
                         imgStartGameBtn.Source = DebitImage.Source;
                         mpStartScreen.LoadedBehavior = MediaState.Play;
                         mpStartScreenMusic.LoadedBehavior = MediaState.Play;
                         if (!String.IsNullOrWhiteSpace(AppSet.strFSOpathGameExe)) {					// Play Game
-                            lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+                            lbCredits.Content = "\r\n" + intCredits.ToString() + @" / " + AppSet.intTokensMin.ToString();
                             AppSet.IsAttractMode = false;
                             AppSet.intCredits = intCredits - AppSet.intTokensMin;
                             mpStartScreen.LoadedBehavior = MediaState.Stop;
@@ -1666,6 +1632,21 @@ namespace Strokes {
         public bool boolCreditMode { get; set; }
         #endregion
 
+        private void imgInsertCreditBtn_MouseDown(object sender, MouseButtonEventArgs e) {
+            intCredits++;
+            //MessageBox.Show("intCredts #: " + intCredits.ToString(), "Insert Credit Button MouseDown");
+            AppSet.intCredits = intCredits;
+            //MessageBox.Show("AppSet.intCredts #: " + AppSet.intCredits.ToString(), "Insert Credit Button MouseDown");
+            MainWindow.AppSet.intCredits = AppSet.intCredits;
+            //MessageBox.Show("MainWindow.AppSet.intCredts #: " + MainWindow.AppSet.intCredits.ToString(), "Insert Credit Button MouseDown");
+            //StartGameBtn_MouseDown(sender, e);
+            lbCredits.Content = "Credits Inserted (" + MainWindow.AppSet.intCredits.ToString() + " / " + AppSet.intTokensMin.ToString() + ")";
+            if (MainWindow.AppSet.intCredits >= AppSet.intTokensMin) {
+                imgInsertCreditBtn.Visibility = Visibility.Hidden;
+                imgStartGameBtn.Visibility = Visibility.Visible;
+                AppSet.AttractMode = false;
+            }
+        }
     }
 
 

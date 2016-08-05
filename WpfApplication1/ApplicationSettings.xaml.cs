@@ -36,37 +36,30 @@ namespace Strokes {
 
         // Strokes ApplicationSettings Property for #1 Ticket Dispence based on Score
         private static int _intScoreTickets01;
-        // 0-50,000 Score --Print 2 Tickets
         [JsonProperty("intScoreTickets01")]
         public int intScoreTickets01 { get { return _intScoreTickets01; } set { if (_intScoreTickets01 != value) { _intScoreTickets01 = value; RaisePropertyChanged("intScoreTickets01"); } } }
         // Strokes ApplicationSettings Property for #2 Ticket Dispence based on Score
         private static int _intScoreTickets02;
-        // 50,001-100,000 --Print 4 Tickets
         [JsonProperty("intScoreTickets02")]
         public int intScoreTickets02 { get { return _intScoreTickets02; } set { if (_intScoreTickets02 != value) { _intScoreTickets02 = value; RaisePropertyChanged("intScoreTickets02"); } } }
         // Strokes ApplicationSettings Property for #3 Ticket Dispence based on Score
         private static int _intScoreTickets03;
-        // 100,001-150,000 --Print 6 Tickets 
         [JsonProperty("intScoreTickets03")]
         public int intScoreTickets03 { get { return _intScoreTickets03; } set { if (_intScoreTickets03 != value) { _intScoreTickets03 = value; RaisePropertyChanged("intScoreTickets03"); } } }
         // Strokes ApplicationSettings Property for #4 Ticket Dispence based on Score
         private static int _intScoreTickets04;
-        // 150,001 - 250,000 --Print 8 Tickets
         [JsonProperty("intScoreTickets04")]
         public int intScoreTickets04 { get { return _intScoreTickets04; } set { if (_intScoreTickets04 != value) { _intScoreTickets04 = value; RaisePropertyChanged("intScoreTickets04"); } } }
         // Strokes ApplicationSettings Property for #5 Ticket Dispence based on Score
         private static int _intScoreTickets05;
-        // 250,001 - 350,000 --Print 12 Tickets
         [JsonProperty("intScoreTickets05")]
         public int intScoreTickets05 { get { return _intScoreTickets05; } set { if (_intScoreTickets05 != value) { _intScoreTickets05 = value; RaisePropertyChanged("intScoreTickets05"); } } }
         // Strokes ApplicationSettings Property for #6 Ticket Dispence based on Score
         private static int _intScoreTickets06;
-        // 350,001 - 500,000 --Print 15 Tickets
         [JsonProperty("intScoreTickets06")]
         public int intScoreTickets06 { get { return _intScoreTickets06; } set { if (_intScoreTickets06 != value) { _intScoreTickets06 = value; RaisePropertyChanged("intScoreTickets06"); } } }
         // Strokes ApplicationSettings Property for #7 Ticket Dispence based on Score
         private static int _intScoreTickets07;
-        // 500,001+ --Print 50 Tickets
         [JsonProperty("intScoreTickets07")]
         public int intScoreTickets07 { get { return _intScoreTickets07; } set { if (_intScoreTickets07 != value) { _intScoreTickets07 = value; RaisePropertyChanged("intScoreTickets07"); } } }
         // Strokes ApplicationSettings Property for #8 Ticket Dispence based on Score
@@ -105,6 +98,7 @@ namespace Strokes {
         private static int _intGameBrushSize;
         [JsonProperty("intGameBrushSize")]
         public int intGameBrushSize { get { return _intGameBrushSize; } set { if (_intGameBrushSize != value) { _intGameBrushSize = value; RaisePropertyChanged("intGameBrushSize"); } } }
+
 
         // Strokes ApplicationSettings Property for UI Completion Percentage
         // Between 10% and 100%

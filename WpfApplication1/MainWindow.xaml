@@ -53,14 +53,14 @@
                 <Image x:Name="imgStartGameBtn" MouseDown="StartGameBtn_MouseDown" Source="Start Game Button.png" Visibility="Hidden"  Stretch="Fill" Grid.RowSpan="2"  HorizontalAlignment="Left" Margin="200,734,0,0" VerticalAlignment="Top" Height="250" Width="250" />
                 <Image x:Name="imgInsertCreditBtn"  MouseDown="imgInsertCreditBtn_MouseDown" Visibility="Hidden" Height="250" Width="250"  Source="Insert Credit Button.png" Stretch="Fill" HorizontalAlignment="Left" Margin="200,734,0,0" Grid.RowSpan="1" VerticalAlignment="Top" RenderTransformOrigin="0,0" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
                 <Image x:Name="imgResultScreenBg" MouseDown="ResultScreenBg_MouseDown" Stretch="Fill" Source="Results Screen Background.png"  VerticalAlignment="Top" HorizontalAlignment="Stretch"   Grid.RowSpan="2"  />
-                <Image x:Name="imgPlayAgainBg" Source="PlayAgain Background.png"  Stretch="Fill" Grid.RowSpan="2" VerticalAlignment="Top" />
+                <Image x:Name="imgPlayAgainBg" Source="PlayAgain Background.jpg"  Stretch="Fill" Grid.RowSpan="2" VerticalAlignment="Top" />
                 
                 <Image x:Name="imgTip1" Source="Tip1.png"  HorizontalAlignment="Left" Height="608" Margin="1100,700,-636,0" VerticalAlignment="Top" Width="608" Grid.RowSpan="2" />
                 
                 <Label x:Name="lbTickets" Content="0" Foreground="Red" FontFamily="Finger Paint" FontWeight="Bold" FontSize="240" HorizontalAlignment="Left" Margin="450,350,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="lbScore" Content="0" Foreground="Red"  FontFamily="Finger Paint" FontWeight="Bold" FontSize="140" HorizontalAlignment="Left" Margin="1200,300,-128,0" VerticalAlignment="Top"/>
-                <Label x:Name="lbCredits" Content="" Visibility="Hidden" Foreground="Red"  FontFamily="Finger Paint" FontSize="40" HorizontalAlignment="Center"  VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" HorizontalContentAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Bottom" Padding="0" Grid.RowSpan="2" Margin="0,0,0,1026" />
-                <!--<Label x:Name="lbCredits" Content="{Binding intCredits}" Visibility="Hidden" Foreground="Red"  FontFamily="Finger Paint" FontSize="40" HorizontalAlignment="Center"  VerticalAlignment="Bottom" RenderTransformOrigin="0,0" HorizontalContentAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Bottom" Padding="0" Grid.wSpan="2">
+                <Label x:Name="lbCredits" Content="" Visibility="Hidden" Foreground="Red"  FontFamily="Finger Paint" FontSize="40" HorizontalAlignment="Center"  VerticalAlignment="Top" RenderTransformOrigin="0,0" HorizontalContentAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Bottom" Padding="0" Grid.RowSpan="2" />
+                <!--<Label x:Name="lbCredits" Content="{Binding intCredits}" Visibility="Hidden" Foreground="Red"  FontFamily="Finger Paint" FontSize="40" HorizontalAlignment="Center"  VerticalAlignment="Bottom" RenderTransformOrigin="0,0" HorizontalContentAlignment="Center" ScrollViewer.VerticalScrollBarVisibility="Disabled" VerticalContentAlignment="Bottom" Padding="0" Grid.RowSpan="2">
                     <Label.DataContext>
                         <local:StrokesSettings/>
                     </Label.DataContext>
