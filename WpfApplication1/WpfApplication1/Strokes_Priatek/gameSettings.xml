@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<totalGameTimeInMinutes>.2</totalGameTimeInMinutes>
+	<highScoreTimeOut>30</highScoreTimeOut>
+	<startWithoutBgMusic>false</startWithoutBgMusic>
+	<sizeMult>1.5</sizeMult>  <!-- size for large format = 2.5 -->
+	<coloredThresholdPercentage>97</coloredThresholdPercentage>
+	<outOfBoundsPenaltyMultiplier>2</outOfBoundsPenaltyMultiplier>
+	<startInFullScreen>true</startInFullScreen>
+	<gameOverTimeOutTimeInSeconds>12</gameOverTimeOutTimeInSeconds>
+	<outputScoreURL></outputScoreURL> <!-- default outputs to desktop -->
+</data>
+

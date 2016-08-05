@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	
+	<level color="SeaShell_large_color.png" mask="SeaShell_large_mask.png" overlay="SeaShell_large_overlay.png" levelTime="20" muralPosX="831" muralPosY="988" />
+	<!-- muralPosX="650" muralPosY="313" -->
+	<level color="Pufferfish_color.png" mask="Pufferfish_mask.png" overlay="Pufferfish_overlay.png" levelTime="20"  muralPosX="150" muralPosY="186" />
+	<level color="Blob_color.png" mask="Blob_mask.png" overlay="Blob_overlay.png" levelTime="20"  muralPosX="191" muralPosY="916" />
+	<level color="fish2_color.png" mask="fish2_mask.png" overlay="fish2_overlay.png" levelTime="20"  muralPosX="537" muralPosY="523" />
+	<level color="snail_color.png" mask="snail_mask.png" overlay="snail_overlay.png" levelTime="20"  muralPosX="938" muralPosY="921" />
+	<!--muralPosX="634" muralPosY="681"-->
+	<level color="TreasureChest_color.png" mask="TreasureChest_mask.png" overlay="TreasureChest_overlay.png" levelTime="20" muralPosX="654" muralPosY="681" />
+	<!--muralPosX="1413" muralPosY="363"-->
+	<level color="fish_01_color.png" mask="fish_01_mask.png" overlay="fish_01_overlay.png" levelTime="30"  muralPosX="312" muralPosY="393" />
+	<!--muralPosX="1231" muralPosY="610"-->
+	<level color="turtle_01_color.png" mask="turtle_01_mask.png" overlay="turtle_01_overlay.png" levelTime="20"  muralPosX="216" muralPosY="657" />
+	<level color="Crab_color.png" mask="Crab_mask.png" overlay="Crab_overlay.png" levelTime="25"  muralPosX="559" muralPosY="953" />
+	<!--muralPosX="831" muralPosY="380"-->
+	<level color="Snorkler_color.png" mask="Snorkler_mask.png" overlay="Snorkler_overlay.png" levelTime="40"  muralPosX="882" muralPosY="370" />
+	<!--muralPosX="1012" muralPosY="218"-->
+	<level color="bubbles_color.png" mask="bubbles_mask.png" overlay="bubbles_overlay.png" levelTime="30"  muralPosX="1063" muralPosY="228" />
+	<!--muralPosX="1144" muralPosY="381"-->
+	<level color="fish_03_color.png" mask="fish_03_mask.png" overlay="fish_03_overlay.png" levelTime="20"  muralPosX="1275" muralPosY="426" />
+	<level color="Shark_color.png" mask="Shark_mask.png" overlay="Shark_overlay.png" levelTime="50"  muralPosX="1674" muralPosY="167" />
+		
+	
+</data>
